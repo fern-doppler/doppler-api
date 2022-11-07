@@ -1,22 +1,22 @@
-# {Company} API
+# Doppler API
 
 Tagging a release on this repository will update the:
 
-- [TypeScript SDK Github Repo](https://github.com/fern-{company}/{company}-node)
-- [Java SDK Github Repo](https://github.com/fern-{company}/{company}-java)
-- [OpenAPI Description Github Repo](https://github.com/fern-{company}/{company}-openapi)
+- [TypeScript SDK Github Repo](https://github.com/fern-doppler/doppler-node)
+- [Java SDK Github Repo](https://github.com/fern-doppler/doppler-java)
+- [OpenAPI Description Github Repo](https://github.com/fern-doppler/doppler-openapi)
 - _More SDKs to come..._
 
 ## What is in this repository?
 
 This repository contains
 
-- {Company}'s Fern API Definition which lives in the [definition](./fern/api/definition/) folder
+- Doppler's Fern API Definition which lives in the [definition](./fern/api/definition/) folder
 - Generators (see [generators.yml](./fern/api/generators.yml))
 
 ## What is in the API Definition?
 
-The API Definition contains information about what endpoints, types, and errors are used in the API. The definition is broken into smaller files such as [{TODO}.yml](fern/api/definition/{TODO}.yml) and [{TODO}.yml](fern/api/definition/{TODO}.yml).
+The API Definition contains information about what endpoints, types, and errors are used in the API. The definition is broken into smaller files such as [workplace.yml](fern/api/definition/workplace.yml) and [{TODO}.yml](fern/api/definition/{TODO}.yml).
 
 In order to make sure that the definition is valid, you can use the Fern CLI.
 

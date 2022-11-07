@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fern-api/fern/main/fern.schema.json
+
+services:
+  http:
+    WorkplaceService:
+      base-path: /workplace
+      auth: true
+      endpoints:
+        retrieve: 
+          path: /
+          method: GET 
+          response: Workplace 
+        update: 
+          path: /
+          method: POST 
+          request: UpdateWorkplace
+          response: Workplace 
+
+types:
+  Workplace:
+    properties:
+      name: 
+        type: string
+        docs: Name of the workplace.
+      billing_email: 
+        type: string 
+        docs: Billing email we will send invoices to.
+
+  UpdateWorkplace:
+    properties:
+      name: 
+        type: optional<string>
+        docs: Name of the workplace.
+      billing_email: 
+        type: optional<string> 
+        docs: Billing email we will send invoices to.

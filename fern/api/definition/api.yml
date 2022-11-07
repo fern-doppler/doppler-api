@@ -1,10 +1,5 @@
 name: api
-auth: bearer
+auth: basic
 environments:
-  Production:
-    url: 
-    docs:
-  Sandbox:
-    url:
-    docs:
+  Production: https://api.doppler.com/v3
 default-environment: Production
