@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fern-api/fern/main/fern.schema.json
+
+services:
+  http:
+    ActivityLogsService:
+      base-path: /logs
+      auth: true
+      endpoints:
+        list: 
+          path: /
+          query-parameters:
+            page:
+              type: optional<string>
+              docs: Page number
+            per_page:
+              type: optional<integer>
+              docs: Items per page
+          method: GET 
+          response: ActivityLogsList
+
+        retrieve: 
+          path: /log
+          query-parameters:
+            log:
+              type: string
+              docs: Unique identifier for the log object.
+          method: GET 
+          response: ActivityLog
+
+types:
+  ActivityLog: 
+    properties:
+      id:
+        type: string 
+        docs: Unique identifier for the object.
+      text: 
+        type: string 
+        docs: Text describing the event.
+      html: 
+        type: string 
+        docs: HTML describing the event.
+      user: User 
+      project: 
+        type: string 
+        docs: Unique identifier for the project object.
+      environment: 
+        type: string 
+        docs: Unique identifier for the environment object.
+      config:
+        type: string 
+        docs: The config's name.
+      created_at: 
+        type: datetime 
+        docs: Date and time of the object's creation.
+
+  ActivityLogsList:
+    properties:
+      page: integer 
+      logs: list<ActivityLog>
+
+  User: 
+    properties:
+      email: string 
+      name: string 
+      profile_image_url: string 
