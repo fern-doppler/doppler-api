@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fern-api/fern/main/fern.schema.json
+
+services:
+  http:
+    ProjectsService:
+      base-path: /projects
+      auth: true
+      endpoints:
+        list: 
+          path: /
+          query-parameters:
+            page:
+              type: optional<string>
+              docs: Page number
+            per_page:
+              type: optional<integer>
+              docs: Items per page
+          method: GET 
+          response: ProjectList
+
+        create: 
+          path: /
+          method: POST 
+          request: CreateProjectRequest
+          response: Project
+
+        retrieve: 
+          path: /project
+          query-parameters:
+            project:
+              type: string
+              docs: Unique identifier for the project object.
+          method: GET 
+          response: Project 
+
+        update: 
+          path: /project
+          method: POST 
+          request: UpdateProjectRequest
+          response: Project  
+          
+        delete: 
+          path: /project
+          method: DELETE 
+          request: DeleteProjectRequest
+
+types:
+  Project: 
+    properties:
+      id: 
+        type: string 
+        docs: Unique identifier for the object.
+      name: 
+        type: string
+        docs: Name of the project.
+      description: 
+        type: string 
+        docs: Description of the project. 
+      created_at: 
+        type: datetime 
+        docs: Date and time of the object's creation.
+  
+  ProjectList:
+    properties:
+      page: integer 
+      projects: list<Project>
+
+  CreateProjectRequest: 
+    properties:
+      name:   
+        type: string 
+        docs: Name of project
+      description: 
+        type: optional<string>
+        docs: Description of project 
+    
+  UpdateProjectRequest: 
+    properties:
+      project: 
+        type: string 
+        docs: Unique identifier for the project object.
+      name:   
+        type: string 
+        docs: Name of the project. 
+      description: 
+        type: optional<string>
+        docs: Description of the project.
+
+  DeleteProjectRequest:
+    properties:
+      project: 
+        type: string 
+        docs: Unique identifier for the project object.
