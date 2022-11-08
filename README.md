@@ -2,9 +2,8 @@
 
 Tagging a release on this repository will update the:
 
-- [TypeScript SDK Github Repo](https://github.com/fern-doppler/doppler-node)
-- [Java SDK Github Repo](https://github.com/fern-doppler/doppler-java)
-- [OpenAPI Description Github Repo](https://github.com/fern-doppler/doppler-openapi)
+- [TypeScript SDK repo](https://github.com/fern-doppler/doppler-node)
+- [OpenAPI description repo](https://github.com/fern-doppler/doppler-openapi)
 - _More SDKs to come..._
 
 ## What is in this repository?
