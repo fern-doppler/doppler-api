@@ -4,6 +4,7 @@ Tagging a release on this repository will update the:
 
 - [TypeScript SDK repo](https://github.com/fern-doppler/doppler-node)
 - [OpenAPI description repo](https://github.com/fern-doppler/doppler-openapi)
+- [Postman collection repo](https://github.com/fern-doppler/doppler-postman)
 - _More SDKs to come..._
 
 ## What is in this repository?
