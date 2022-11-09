@@ -20,4 +20,4 @@ release:
         api-key: ${FERN_POSTMAN_API_KEY}
         workspace-id: ${FERN_POSTMAN_WORKSPACE_ID}
     github:
-      repository: fern-flipt/flipt-postman
+      repository: fern-doppler/doppler-postman
